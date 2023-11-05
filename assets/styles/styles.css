@@ -1,89 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+:root {
+    --dark-one: #333;
+    --dark-two: #7a7a7a;
+    --main-color: #8b64e7;
+    --pink-color: #C9009C;
+    --light-one: #fff;
+    --light-two: #f9fafb;
+    --light-three: #DDDDDD;
+}
 
 body,
-button {
+btn {
     font-family: "Poppins", sans-serif;
 }
 
-img {
-    width: 100%;
-}
-
-.container {
-    position: relative;
-    z-index: 5;
-    max-width: 92rem;
-    padding: 0 4rem;
-    margin: 0 auto;
-}
-
-.stop-scrolling {
-    height: 100%;
-    overflow: hidden;
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-}
-
-.text2 {
-    font-size: 1.1rem;
-    color: darkblue;
-    line-height: 1.6;
-}
-
-.image {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.z-index {
-    position: relative;
-    z-index: 2;
-}
-
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-}
-
-.btn {
-    display: inline-block;
-    padding: 0.85rem 2rem;
-    background-color: black; /* color botón */
-    color: white; /* color texto del botón*/
-    border-radius: 5rem;
-    font-size: 1.05rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: 0.3s;
-    margin-left: 1rem;
-}
-
-.btn:hover { 
-    color: white; /* Al pasar el mouse sobre la seccion */
-    background-color: lightseagreen; /* El boton cambia a color cuando el cursor pase por encima */
-}
-
-.btn.small {
-    padding: 0.7rem 1.8rem;
-    font-size: 1rem;
-}
-
-
-.container {
-    max-width: 1000px;
-}
+/* Header */
 
 header {
     background: url("../images/fondo1.png");
@@ -97,28 +28,123 @@ header {
 
 .tittle {
     position: absolute; /* Establece el posicionamiento absoluto */
-    bottom: 50px; /* Mueve el título 20 píxeles hacia arriba de la parte inferior de la pantalla*/
+    bottom: 50px; /* Mueve el título 50 píxeles hacia arriba de la parte inferior de la pantalla*/
     left: 50%; /* Centra el título horizontalmente */
     transform: translateX(-50%); /* Centra el título horizontalmente */
     color: black;
     font-size: 30px;
     text-align: center;
 }
-.btn {
-    background-color: #8B63E8;
+.tittle .btn {
+    background-color: var(--main-color);
     border-radius: 20px;
     color: white;
     font-size: 36px; 
+}
+.tittle .btn:hover {
+    background-color: var(--pink-color);
     color: white;
 }
 
 .navbar-nav {
-    background-color: #8B63E8;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center; /* Centro los elementos horizontalmente */
+    align-items: center; /* Centro los elementos verticalmente */
+    height: 100%; /* Asegura que los enlaces ocupen toda la altura de la barra de navegación */
 }
 
-.row {
-    margin: 0;
+.navbar-nav .nav-item {
+    margin: 0 90px; /* Añade un espacio entre los elementos de navegación */
 }
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+/* Añade estilos para el botón del menú desplegable, si es necesario */
+.navbar-toggler {
+    background-color: white;
+    border: none;
+    color: var(--main-color);
+}
+
+.searching-input {
+    position: absolute; /* Establece el posicionamiento absoluto */
+    bottom: 288px; /* Mueve el título 280 píxeles hacia arriba de la parte inferior de la pantalla*/
+    left: 460px; /* Centra el título horizontalmente */
+    text-align: left;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 45px;
+    width: 520px;
+    height: 61px;
+    border-radius: 50px;
+}
+.searching-input::placeholder {
+    font-weight: 100;
+    color: black;
+}
+
+/* End Header */
+
+/* Registro */
+
+#row-registro {
+    background: url("../images/fondoregistro.png");
+    background-position: center;
+    background-size: cover;
+    height: 1050px;
+}
+
+.register-form {
+    transform: translateY(+280px); 
+    background-color: var(--pink-color);
+    width: 580px;
+    height: 680px;
+    margin: 0 auto; /* Centrar el formulario en la página */
+    padding: 20px; /* Añadir un poco de espacio interno */
+    border-radius: 60px;
+}
+.register-form .row {
+    display: grid;
+    background-color: var(--pink-color);
+    transform: translateX(+5%);
+    width: 510px;
+    height: 60px;
+    margin-bottom: 55px; /* Añadir espacio entre las filas */
+}
+.contact-input {
+    border: none;
+    outline: none;
+    background-color: var(--pink-color);
+    padding: 20px; /* Añadir un poco de espacio interno */
+    font-size: 45px;
+    width: 510px;
+    height: 60px;
+}
+
+.contact-input::placeholder {
+    font-weight: 100;
+    color: white; /* Cambiar el color del texto del placeholder a blanco */
+}
+
+.line {
+    display: block;
+    border-top: 3px solid white; /* Agregar una línea superior para separar los placeholders */
+    margin: 2px 0; /* Espacio superior e inferior para la línea */
+}
+
+/* End Registro */
+
+
+/* Productos */
 
 #row-productos {
     background: url("../images/fondo4.png");
@@ -129,18 +155,38 @@ header {
     /*background-blend-mode: multiply;*/
 }
 
+/* End Productos */
+
 /* About Us */
 
 #row-about-us {
-    background: url("../images/fondo5.png");
+    background-image: url("../images/fondoaboutus.png");
     background-position: center;
     /*background-repeat: no-repeat;*/
     background-size: cover;
     height: 1050px;
-    /*background-blend-mode: multiply;*/
+    position: absolute;
 }
 
-/* About Us */
+.about-us {
+    position: relative;
+    width: 100%;
+    background-color: var(--light-two);
+}
+
+.background-bg {
+    position: absolute;
+    width: 100%;
+    height: 520px;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+}
+
+.about-us .title,
+.about-us .title:before {
+    color: var(--light-one);
+}
 
 .filter {
     width: 100%;
@@ -168,7 +214,7 @@ header {
 
 .filter-btn.active {
     background-color: var(--light-one);
-    color: var(--main-color);
+    color: var(--pink-color);
 }
 
 .grid {
@@ -178,7 +224,6 @@ header {
 
 .grid-item {
     width: 33.33%;
-    padding: 1rem 1.2rem;
     display: flex;
     justify-content: center;
 }
@@ -194,7 +239,6 @@ header {
 
 .gallery-image img {
     position: absolute;
-    height: 115%;
     width: initial;
     top: 50%;
     left: 50%;
@@ -205,52 +249,23 @@ header {
 
 .gallery-image .img-overlay {
     position: absolute;
-    width: 100%;
+    left: 85px;
+    width: 260px;
     height: 100%;
-    top: 0;
-    left: 0;
     z-index: 2;
-    color: var(--light-one);
-    background-color: rgba(76, 172, 251, 0.55);
+    background-color: rgba(171, 200, 226, 0.55);
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
-    padding: 2rem 3.2rem;
     opacity: 0;
     transition: 0.5s;
-}
-
-.img-overlay .plus {
-    position: relative;
-    margin: auto 0;
-}
-
-.plus:before,
-.plus:after {
-    content: "";
-    position: absolute;
-    width: 4.5rem;
-    height: 3px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: var(--light-one);
-    border-radius: 3px;
-}
-
-.plus:before {
-    transform: translate(-50%, -50%) rotate(-90deg);
-}
-
-.img-description {
-    width: 100%;
 }
 
 .img-overlay h3 {
     font-weight: 600;
     text-transform: uppercase;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .img-overlay h5 {
@@ -262,16 +277,57 @@ header {
     opacity: 1;
 }
 
-.gallery-image:hover img {
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
 .more-about-us {
     display: flex;
     justify-content: center;
 }
+.more-about-us .btn {
+    background-color: var(--light-one);
+    border-radius: 20px;
+    color: var(--pink-color);
+    font-size: 36px; 
+}
+.more-about-us:hover .btn {
+    background-color: rgba(171, 200, 226, 0.55);
+}
 
-/* End About1 */
+/* End About Us */
 
+/* Footer */
 
+footer {
+    visibility: visible;
+    opacity: 1;
+    background-image: url("../images/fondo1.png");
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
+footer h4 {
+    font-size: 24px;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* End Footer */
