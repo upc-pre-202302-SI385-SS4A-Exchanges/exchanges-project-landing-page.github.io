@@ -100,7 +100,7 @@ header {
     background: url("../images/fondoregistro.png");
     background-position: center;
     background-size: cover;
-    height: 1050px;
+    height: 1020px;
 }
 
 .register-form {
@@ -162,20 +162,16 @@ header {
 #row-about-us {
     background-image: url("../images/fondoaboutus.png");
     background-position: center;
-    /*background-repeat: no-repeat;*/
     background-size: cover;
-    height: 1050px;
-    position: absolute;
+    height: 1020px;
 }
 
 .about-us {
-    position: relative;
     width: 100%;
     background-color: var(--light-two);
 }
 
 .background-bg {
-    position: absolute;
     width: 100%;
     height: 520px;
     top: 0;
@@ -268,11 +264,6 @@ header {
     text-align: center;
 }
 
-.img-overlay h5 {
-    font-size: 1.15rem;
-    font-weight: 300;
-}
-
 .gallery-image:hover .img-overlay {
     opacity: 1;
 }
@@ -296,12 +287,10 @@ header {
 /* Footer */
 
 footer {
-    visibility: visible;
-    opacity: 1;
-    background-image: url("../images/fondo1.png");
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+    background-color: var(--dark-one);
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
 }
 
 footer h4 {
@@ -330,6 +319,14 @@ footer a:hover {
     text-decoration: underline;
 }
 
+span {
+    color: var(--main-color);
+    cursor: pointer;
+    font: bold;
+}
+
+.d-flex {
+    justify-content: center;
+}
+
 /* End Footer */
-
-
