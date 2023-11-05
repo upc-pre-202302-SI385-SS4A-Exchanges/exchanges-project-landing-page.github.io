@@ -11,11 +11,8 @@
         crossorigin="anonymous"
     >
     <link rel="stylesheet" href="assets/styles/styles.css">
-  
-    <title>Exchanges</title>
 </head>
 <body>
-    <!-- header -->
     <header id="header">
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
@@ -26,37 +23,62 @@
                     <ul class ="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#">Home</a>
+                            <hr class="line">
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#row-categorias">Categorias</a>
+                            <a class="nav-link text-white" href="#row-registro">Registrate Aquí</a>
+                            <hr class="line">
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#row-productos">Productos</a>
+                            <hr class="line">
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-white" href="#row-about-us">Sobre Nosotros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="row-contact-us">Contacto</a>
+                            <hr class="line">
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="container">
+            <input type="text" class="searching-input text-dark" placeholder="" />
             <div class="tittle">
                 ¿No tienes una cuenta? <br>
-                <button class="btn mt-3"> Crear una cuenta </button>
+                <a href="#row-registro" class="btn mt-3">Crear una cuenta</a>
             </div>
-
         </div>
     </header>
     <!-- Contenido principal de la página-->
     <main>
-        <!--
-        <div class="row" id="row-home">
-            
-        </div>-->
+        
+        <div class="row-registro" id="row-registro">
+            <div class="container text-center"> 
+                <div class="register-form">
+                    <div class="row">
+                        <input type="text" class="contact-input text-white-50" placeholder="Nombres" />
+                        <hr class="line">
+                    </div>
+                    <div class="row">
+                        <input type="text" class="contact-input text-white-50" placeholder="Apellidos" />
+                        <hr class="line">
+                    </div>
+                    <div class="row">
+                        <input type="text" class="contact-input text-white-50" placeholder="Correo" />
+                        <hr class="line">
+                    </div>
+                    <div class="row">
+                        <input type="text" class="contact-input text-white-50" placeholder="Nombre de usuario" />
+                        <hr class="line">
+                    </div>
+                    <div class="row">
+                        <input type="text" class="contact-input text-white-50" placeholder="Contraseña" />
+                        <hr class="line">
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
         <div class="row" id="row-productos">
             <div class="container text-center"> 
@@ -64,11 +86,12 @@
             </div>
         </div>
 
-        <div class="row" id="row-about-us">
+        <div class="about-us" id="row-about-us">
             <div class="container">
                 <div class="section-header">
-                    <h3 class="title" data-title="Exchanges"> <br><br> About Us</h3>
-                    <p class="text2">
+                    <h3 class="title" data-title="Exchanges" style="text-align: center; font-size: 48px;"> <br> About Us</h3>
+                    <hr class="line">
+                    <p class="text2" style="text-align: center; font-size: 20px;">
                         <br>
                         Exchanges es una startup creada por cinco jovenes de la Universidad Peruana de Ciencias Aplicadas 
                         para aficionados de la moda.
@@ -84,83 +107,97 @@
                         <button class="filter-btn" data-filter=".Accountant">Accountant</button>
                     </div>
 
-                    <div class="grid">
-                        <div class="grid-item CEO">
-                            <div class="gallery-image">
-                                <img src="assets/images/miriam.png" alt="" />
-                                <div class="img-overlay">
-                                    <div class="img-description">
-                                        <h3>CEO</h3>
-                                        <h5>The Product Manager is the figure that has the responsibility of identifying the needs of consumers and satisfying them through development</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item Founder">
-                            <div class="gallery-image">
-                                <img src="assets/images/veronica.png" alt="" />
-                                <div class="img-overlay">
-                                    <div class="img-description">
-                                        <h3>Founder</h3>
-                                        <h5>He is the person who founded this company</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item Manager">
+                    <div class="grid" style="position: relative; height: 550px">
+                        <div class="grid-item CEO" style="position: absolute; left: 0px; top: 0px">
                             <div class="gallery-image">
                                 <img src="assets/images/paolo.png" alt="" />
                                 <div class="img-overlay">
-                                    <div class="img-description">
-                                        <h3>Product Manager</h3>
-                                        <h5>Responsibility of identifying the needs of consumers and satisfying them through development</h5>
+                                    <div class="img-description" style="color: black;">
+                                        <h3>CEO</h3>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid-item Manager">
+                        <div class="grid-item Founder" style="position: absolute; left: 425px; top: 0px">
+                            <div class="gallery-image">
+                                <img src="assets/images/veronica.png" alt="" />
+                                <div class="img-overlay">
+                                    <div class="img-description" style="color: black;">
+                                        <h3>Founder</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item Manager" style="position: absolute; left: 850px; top: 0px">
+                            <div class="gallery-image">
+                                <img src="assets/images/miriam.png" alt="" />
+                                <div class="img-overlay">
+                                    <div class="img-description" style="color: black;">
+                                        <h3>Manager</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid-item Manager" style="position: absolute; left: 212.50px; top: 400px">
                             <div class="gallery-image">
                                 <img src="assets/images/oscar.png" alt="" />
                                 <div class="img-overlay">
-                                    <div class="img-description">
+                                    <div class="img-description" style="color: black;">
                                         <h3>Manager</h3>
-                                        <h5>Responsibility of identifying the needs of consumers and satisfying them through development</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="grid-item Accountant">
+                        <div class="grid-item Accountant" style="position: absolute; left: 632.50px; top: 400px">
                             <div class="gallery-image">
                                 <img src="assets/images/joaquin.png" alt="" />
                                 <div class="img-overlay">
-                                    <div class="img-description">
+                                    <div class="img-description" style="color: black;">
                                         <h3>Accountant</h3>
-                                        <h5>Professional who is responsible for keeping and interpreting financial records</h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="more-about-us">
+                    <div class="more-about-us" style="position: absolute; left: 662.50px; top: 900px">
                         <a href="#" class="btn">Home</a>
                     </div>
                 </div>
-        </div>
-
-        <div class="row" id="row-contact-us">
-            <div class="container"> 
-                
             </div>
         </div>
-
     </main>
     <footer>
-
+        <div class="container">
+            
+        </div>
+        <div class="row text-white">
+            <div class="col">
+                <h4>NOSOTROS</h4>
+                <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malums</p>
+            </div>
+    
+            <div class="col">
+                <h4>CREDITOS</h4>
+                <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum</p>
+            </div>
+    
+            <div class="col">
+                <h4>ENLACES</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contáctanos</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
+    
+    <!--JS Y DEPENDENCIAS-->
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
         crossorigin="anonymous"
     ></script>
+    <script src = "assets/scripts/main.js" type="text/javascript"></script>
 </body>
 </html>
