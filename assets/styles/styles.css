@@ -1,16 +1,13 @@
-
 :root {
-    --dark-one: #333;
+    --dark-one: black;
     --dark-two: #7a7a7a;
     --main-color: #8b64e7;
     --pink-color: #C9009C;
-    --light-one: #fff;
-    --light-two: #f9fafb;
-    --light-three: #DDDDDD;
+    --light-one: white;
+    --light-two: silver;
 }
 
-body,
-btn {
+body, btn {
     font-family: "Poppins", sans-serif;
 }
 
@@ -24,6 +21,7 @@ header {
     height: 1050px;
     /*background-blend-mode: multiply;*/
     position: relative; /* Establece el posicionamiento relativo en el elemento padre */
+    
 }
 
 .tittle {
@@ -31,19 +29,19 @@ header {
     bottom: 50px; /* Mueve el título 50 píxeles hacia arriba de la parte inferior de la pantalla*/
     left: 50%; /* Centra el título horizontalmente */
     transform: translateX(-50%); /* Centra el título horizontalmente */
-    color: black;
+    color: var(--dark-one);
     font-size: 30px;
     text-align: center;
 }
 .tittle .btn {
     background-color: var(--main-color);
     border-radius: 20px;
-    color: white;
+    color: var(--light-one);
     font-size: 36px; 
 }
 .tittle .btn:hover {
     background-color: var(--pink-color);
-    color: white;
+    color: var(--light-one);
 }
 
 .navbar-nav {
@@ -59,7 +57,7 @@ header {
 }
 
 .navbar-nav .nav-link {
-    color: white;
+    color: var(--light-one);
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 500;
@@ -67,30 +65,50 @@ header {
     padding: 5px 15px;
 }
 
-/* Añade estilos para el botón del menú desplegable, si es necesario */
+/* Añade estilos para el botón del menú desplegable*/
 .navbar-toggler {
-    background-color: white;
+    background-color: var(--light-one);
     border: none;
     color: var(--main-color);
 }
 
-.searching-input {
-    position: absolute; /* Establece el posicionamiento absoluto */
-    bottom: 288px; /* Mueve el título 280 píxeles hacia arriba de la parte inferior de la pantalla*/
-    left: 460px; /* Centra el título horizontalmente */
-    text-align: left;
+/* Estilo opcional para el cuadro de autocompletado */
+#autocomplete-container {
+    background-color: var(--light-one);
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    top: 62%;
+    left: 33%;
     border: none;
     outline: none;
-    background-color: white;
-    font-size: 45px;
-    width: 520px;
-    height: 61px;
-    border-radius: 50px;
-}
-.searching-input::placeholder {
-    font-weight: 100;
-    color: black;
-}
+  }
+  
+  #autocomplete-input {
+    width: auto; /* Ancho automático */
+    min-width: 10%; /* Ancho mínimo */
+    font-size: 40px; /* Tamaño de fuente */
+    height: 10%;
+    border: none;
+    outline: none;
+  }
+  
+  #autocomplete-suggestion {
+    position: absolute;
+    top: 0;
+    left: 0; /* Posiciona la sugerencia dentro del input */
+    width: auto;
+    background-color: #8cbbe5; /* Celeste */
+    display: none;
+    font-size: 40px; /* Tamaño de fuente */
+    outline: none;
+  }
+  
+  /* Estilo para resaltar la opción seleccionada con Tab */
+  .selected {
+    background-color: #aaf0e0;
+  }
+  
 
 /* End Header */
 
@@ -120,7 +138,7 @@ header {
     height: 60px;
     margin-bottom: 55px; /* Añadir espacio entre las filas */
 }
-.contact-input {
+.register-input {
     border: none;
     outline: none;
     background-color: var(--pink-color);
@@ -130,14 +148,29 @@ header {
     height: 60px;
 }
 
-.contact-input::placeholder {
+.register-input::placeholder {
     font-weight: 100;
-    color: white; /* Cambiar el color del texto del placeholder a blanco */
+    color: var(--light-two);
+}
+
+.register-form .btn {
+    background-color: var(--light-one);
+    color: var(--dark-one)
+}
+.register-form .btn:hover {
+    background-color: #8cbbe5;
+}
+
+#mensaje {
+    display: none;
+    color: var(--light-one);
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .line {
     display: block;
-    border-top: 3px solid white; /* Agregar una línea superior para separar los placeholders */
+    border-top: 3px solid var(--light-one); /* Agregar una línea superior para separar los placeholders */
     margin: 2px 0; /* Espacio superior e inferior para la línea */
 }
 
@@ -153,6 +186,11 @@ header {
     background-size: cover;
     height: 1050px;
     /*background-blend-mode: multiply;*/
+}
+#row-productos video {
+    transform: translateY(50%);
+    max-width: 100%;
+    height: auto;
 }
 
 /* End Productos */
@@ -330,3 +368,690 @@ span {
 }
 
 /* End Footer */
+
+/* Responsive */
+
+@media (max-width: 1280px) {
+    .text {
+        font-size: 1rem;
+    }
+
+    .title {
+        font-size: 2.1rem;
+        padding-bottom: 0.65rem;
+    }
+
+    .title:before {
+        margin-bottom: 0.2rem;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+    }
+
+    .title:after {
+        height: 3.5px;
+        width: 70px;
+    }
+
+    .title-sm {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.7rem;
+        font-size: 0.8rem;
+    }
+
+    .section-header .text {
+        max-width: 500px;
+    }
+
+    .section {
+        padding: 4.5rem 0;
+    }
+
+    .column-1 {
+        margin-right: 1rem;
+    }
+
+    .column-2 {
+        margin-left: 1rem;
+    }
+
+    .overlay.overlay-lg .shape {
+        height: 35px;
+    }
+
+    .overlay.overlay-lg .shape.flywheel3 {
+        height: initial;
+        width: 63px;
+    }
+
+    .overlay.overlay-lg .shape.flywheel5 {
+        height: 24px;
+    }
+
+    .overlay.overlay-sm .shape {
+        height: 24px;
+    }
+
+    .overlay.overlay-sm .shape.flywheel3 {
+        height: initial;
+        width: 39px;
+    }
+
+    .overlay.overlay-sm .shape.flywheel5 {
+        height: 19px;
+    }
+
+    header .points1 {
+        width: 270px;
+        bottom: -50px;
+        left: -75px;
+    }
+
+    header .points2 {
+        width: 340px;
+    }
+
+    header .flywheel7 {
+        width: 11%;
+    }
+
+    .header-content .image .img-element {
+        max-width: 500px;
+    }
+
+    nav .container {
+        height: 4.5rem;
+    }
+
+    .header-content .container.grid-2 {
+        min-height: calc(100vh - 4.5rem);
+        padding-bottom: 1.5rem;
+    }
+
+    .logo {
+        width: 65px;
+    }
+
+    .links a {
+        font-size: 0.8rem;
+        padding: 0.65rem 0.7rem;
+    }
+
+    .links a.active {
+        font-size: 0.7rem;
+        padding: 0.7rem 1.7rem;
+        margin-left: 0.6rem;
+    }
+
+    .header-title {
+        font-size: 2.6rem;
+    }
+
+    .header-content .text {
+        margin: 1.1rem 0;
+    }
+
+    .card {
+        min-height: 390px;
+        max-width: 290px;
+        padding: 2.2rem 1.5rem;
+    }
+
+    .icon {
+        width: 65px;
+        margin-bottom: 0.8rem;
+    }
+
+    .card .text {
+        font-size: 0.9rem;
+        margin: 1rem 0;
+    }
+
+    .card:before {
+        font-size: 5rem;
+    }
+
+    .card-wrap {
+        margin: 1rem 0.6rem;
+    }
+
+    .services .points1 {
+        left: -60px;
+    }
+
+    .points-sq {
+        width: 150px;
+    }
+
+    .grid {
+        margin: 0.8rem 0;
+    }
+
+    .grid-item {
+        padding: 0.8rem;
+    }
+
+    .gallery-image {
+        height: 250px;
+        max-width: 325px;
+    }
+
+    .gallery-image .img-overlay {
+        padding: 1.4rem 2rem;
+    }
+
+    .plus:before,
+    .plus:after {
+        width: 2.8rem;
+    }
+
+    .img-overlay h3 {
+        font-size: 1.1rem;
+    }
+
+    .img-overlay h5 {
+        font-size: 0.8rem;
+    }
+
+    .background-bg {
+        height: 370px;
+    }
+
+    .filter-btn {
+        padding: 0.6rem 1.45rem;
+        font-size: 0.7rem;
+    }
+
+    .about2 img {
+        max-width: 420px;
+    }
+
+    .about2 .text {
+        margin-top: 0.7rem;
+    }
+
+    .skills {
+        margin: 0.9rem 0 1.7rem 0;
+    }
+
+    .skill-title {
+        font-size: 1rem;
+    }
+
+    .skill-bar {
+        height: 6px;
+    }
+
+    .about2 .column-1:before {
+        font-size: 6rem;
+        top: 13px;
+    }
+
+    .blog-wrap {
+        margin: 0.7rem 0.5rem;
+    }
+
+    .blog-card {
+        max-width: 315px;
+    }
+
+    .blog-image {
+        height: 200px;
+    }
+
+    .blog-content {
+        padding: 1.8rem 1.7rem 1.9rem 1.7rem;
+    }
+
+    .blog-info {
+        margin-bottom: 0.2rem;
+    }
+
+    .blog-info > * {
+        font-size: 0.75rem !important;
+    }
+
+    .blog-user i {
+        font-size: 0.8rem;
+    }
+
+    .blog-text {
+        font-size: 0.9rem;
+        margin: 0.2rem 0 0.8rem 0;
+    }
+
+    .rate {
+        font-size: 1.15rem;
+        margin-bottom: 1.1rem;
+    }
+
+    .review-text {
+        font-size: 1.05rem;
+    }
+
+    .review-info {
+        margin-top: 1.1rem;
+    }
+
+    .review-name {
+        font-size: 1.05rem;
+    }
+
+    .review-job {
+        font-size: 0.85rem;
+    }
+
+    .quote {
+        font-size: 6.5rem;
+    }
+
+    .review-nav {
+        font-size: 1.55rem;
+    }
+
+    .swiper-btn-next {
+        right: 2.5rem;
+    }
+
+    .swiper-btn-prev {
+        right: 4.5rem;
+    }
+
+    .contact {
+        padding: 9rem 0 6rem 0;
+    }
+
+    .contact-form {
+        padding-left: 1rem;
+    }
+
+    .contact-info {
+        padding-right: 1rem;
+    }
+
+    .contact-box {
+        padding: 3.6rem 3rem;
+    }
+
+    .information-wrap {
+        margin-top: 1.2rem;
+    }
+
+    .contact-icon {
+        min-width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        margin-right: 0.8rem;
+    }
+
+    .contact-icon i {
+        line-height: 50px;
+    }
+
+    .info-text {
+        font-size: 1.05rem;
+    }
+
+    .register-input {
+        font-size: 0.9rem;
+        padding: 0.9rem 1.6rem;
+        margin: 0.4rem 0;
+    }
+
+    .hireme {
+        padding: 8rem 0;
+    }
+
+    .footer {
+        padding: 4rem 0;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+
+    .footer .title-sm {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-input-wrap {
+        height: 36px;
+        margin-top: 0.8rem;
+    }
+
+    .footer-input {
+        font-size: 0.9rem;
+        padding: 0 1.2rem;
+    }
+
+    .input-arrow {
+        font-size: 1.2rem;
+    }
+
+    .copyright .text {
+        font-size: 0.95rem;
+    }
+
+    .followme h3 {
+        font-size: 1.05rem;
+    }
+
+    .followme .footer-line {
+        margin: 0 0.8rem;
+    }
+
+    .social-media a {
+        font-size: 1.05rem;
+    }
+
+    .back-btn-wrap {
+        margin-left: 1.3rem;
+    }
+
+    .back-btn {
+        width: 43px;
+        height: 43px;
+        font-size: 0.9rem;
+    }
+
+    .back-btn-wrap:before {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 850px) {
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+    }
+
+    .column-1 {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .column-2 {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .header-content {
+        margin-top: 1rem;
+    }
+
+    .header-title {
+        font-size: 2.3rem;
+    }
+
+    .header-content .image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    header .column-1 {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .links {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: #252525;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        transform: translateX(100%);
+        transition: 0.5s;
+    }
+
+    .links ul {
+        flex-direction: column;
+    }
+
+    .links a {
+        color: var(--light-one);
+    }
+
+    .links a.active {
+        margin-left: 0;
+        margin: 0.5rem 0;
+    }
+
+    .header-content .container.grid-2 {
+        min-height: 80vh;
+    }
+
+    .grid-item {
+        width: 50%;
+    }
+
+    .background-bg {
+        height: 340px;
+    }
+
+    .about2 .column-1:before {
+        font-size: 5rem;
+    }
+
+    .review-nav {
+        bottom: 3rem;
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 3.2rem 2.7rem;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        padding-bottom: 0.5rem;
+    }
+
+    .contact-form {
+        padding-left: 0;
+        padding-top: 0.5rem;
+    }
+
+    .information-wrap {
+        margin-top: 0.7rem;
+    }
+
+    .information:not(:last-child) {
+        margin-bottom: 0.8rem;
+    }
+
+    .register-input.textarea {
+        min-height: 220px;
+    }
+
+    .contact:before {
+        height: 25%;
+    }
+
+    .contact:after {
+        height: 75%;
+        top: 25%;
+    }
+
+    .footer .grid-4 {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .footer-about {
+        grid-column: 1 / 3;
+    }
+
+    .footer-newstletter {
+        grid-column: 1 / 3;
+    }
+
+    .grid-3-col {
+        margin: 1rem 0;
+        padding: 0;
+    }
+
+    .footer-input-wrap {
+        max-width: 300px;
+        margin: 0.95rem auto 0 auto;
+        grid-template-columns: auto 45px;
+    }
+
+    .bottom-footer {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        padding: 1.5rem 0 0 0;
+        margin-top: 2.5rem;
+        position: relative;
+    }
+
+    .bottom-footer:before {
+        content: "";
+        position: absolute;
+        width: 90%;
+        max-width: 500px;
+        height: 1px;
+        background-color: #7b7b7b;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .followme-wrap {
+        margin-top: 0.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    #autocomplete-container {
+        width: 35%;
+        top: 59%;
+        left: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    #autocomplete-container {
+        width: 35%;
+        top: 59%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .container {
+        padding: 0 2rem;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .text {
+        font-size: 0.92rem;
+    }
+
+    .overlay.overlay-lg .shape {
+        height: 28px;
+    }
+
+    .overlay.overlay-lg .shape.flywheel3 {
+        height: initial;
+        width: 52px;
+    }
+
+    .overlay.overlay-lg .shape.flywheel5 {
+        height: 22px;
+    }
+
+    .records .container {
+        grid-template-columns: 1fr;
+    }
+
+    .records .half-circle {
+        top: 50%;
+        left: 50px;
+    }
+
+    .records .wave2 {
+        bottom: 50%;
+        right: 20px;
+        left: initial;
+    }
+
+    .records .flywheel5 {
+        right: 70px;
+    }
+
+    .records .square2 {
+        bottom: 90px;
+        right: 40px;
+    }
+
+    .testi-content {
+        margin-top: 1rem;
+    }
+
+    .review {
+        padding: 1.5rem 1rem;
+    }
+
+    .review-text {
+        font-size: 0.9rem;
+    }
+
+    .review-nav {
+        bottom: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .swiper-btn-next {
+        right: 1.3rem;
+    }
+
+    .swiper-btn-prev {
+        right: 3rem;
+    }
+
+    .contact {
+        padding: 8rem 0 5rem 0;
+    }
+
+    .contact-info {
+        display: none;
+    }
+
+    .contact-box {
+        padding: 2.3rem 2rem;
+        border-radius: 30px;
+    }
+
+    .contact:before {
+        background-size: 200%;
+    }
+
+    .register-form .row {
+        grid-column-gap: 0.3rem;
+    }
+
+    .register-input {
+        font-size: 0.8rem;
+        padding: 0.8rem 1.4rem;
+        margin: 0.25rem 0;
+    }
+}
